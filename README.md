@@ -41,7 +41,7 @@ stream.on('connected', function(info) {
 });
 
 stream.on('progress', function(kbytes, elapsed, percent) {
-  console.log('%d kbytes read, %d secs elapsed, %f%%', kbytes, elapsed, percent);
+  console.log('%s kbytes read, %s secs elapsed, %s%%', kbytes, elapsed, percent);
 });
 
 stream.on('error', function(err) {
