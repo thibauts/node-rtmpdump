@@ -1,5 +1,5 @@
 {
-  "name": "node-rtmpdump",
+  "name": "rtmpdump",
   "version": "0.1.0",
   "description": "A streamable wrapper around the rtmpdump CLI",
   "author": "thibauts",
@@ -10,6 +10,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thibauts/rtmpdump.git"
   },
   "keywords": [
     "rtmp",
