@@ -1,0 +1,18 @@
+{
+  "name": "node-rtmpdump",
+  "version": "0.1.0",
+  "description": "A streamable wrapper around the rtmpdump CLI",
+  "author": "thibauts",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "split": "~0.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rtmp",
+    "rtmpdump"
+  ]
+}
