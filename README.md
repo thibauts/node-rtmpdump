@@ -1,6 +1,6 @@
 rtmpdump
 =============
-### A nodejs streamable wrapper around the rtmpdump CLI
+### A streamable wrapper around the rtmpdump CLI
 
 This module is a thin wrapper around the `rtmpdump` binary. It provides 
 a readable stream you can pipe to your heart's content.
