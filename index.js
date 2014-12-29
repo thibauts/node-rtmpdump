@@ -6,7 +6,7 @@ function parseInfo(chunk) {
   var info = {};
   var currentSection;
 
-  var lines = chunk.split('\n');
+  var lines = chunk.replace(/[\r]+/g, '').split('\n');
 
   lines.forEach(function(line) {
     // skip every line once we have an error
