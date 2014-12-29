@@ -59,7 +59,7 @@ function createStream(options) {
   var readable = rtmpdump.stdout;
 
   rtmpdump.stderr
-    .pipe(split('\x0d'))
+    .pipe(split('/\x0d(?!\x0a)/'))
     .once('data', function(chunk) {
       // when split by \x0d the first chunk is status / stream info
       var info = parseInfo(chunk);
