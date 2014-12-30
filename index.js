@@ -6,7 +6,9 @@ function parseInfo(chunk) {
   var info = {};
   var currentSection;
 
-  var lines = chunk.split('\n');
+  var lines = chunk.replace(/\r/g, '').split('\n');
+  // the .replace removes the remaining \r which appear
+  // on windows systems after the split operation
 
   lines.forEach(function(line) {
     // skip every line once we have an error
@@ -59,9 +61,11 @@ function createStream(options) {
   var readable = rtmpdump.stdout;
 
   rtmpdump.stderr
-    .pipe(split('\x0d'))
+    .pipe(split(/\r(?!\n)/))
     .once('data', function(chunk) {
-      // when split by \x0d the first chunk is status / stream info
+      // when split by \r the first chunk is status / stream info
+      // since windows systems encode a newline with \r\n we need
+      // to check if the \r has no trailing \n to get the right \r
       var info = parseInfo(chunk);
 
       if(info.status === 'connected') {
