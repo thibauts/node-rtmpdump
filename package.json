@@ -1,6 +1,6 @@
 {
   "name": "rtmpdump",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A streamable wrapper around the rtmpdump CLI",
   "author": "thibauts",
   "license": "MIT",
